@@ -1,0 +1,154 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "test notification",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "OpenNotificationIntent",
+          "slots": [],
+          "samples": [
+            "tell me the notification",
+            "show me the notification",
+            "open the notification",
+            "give me the notification",
+            "what is the notification",
+            "open notification"
+          ]
+        },
+        {
+          "name": "AnswerQuestionIntent",
+          "slots": [
+            {
+              "name": "answerLetter",
+              "type": "LetterType"
+            },
+            {
+              "name": "answerText",
+              "type": "AnswerType"
+            },
+            {
+              "name": "questionText",
+              "type": "QuestionType"
+            }
+          ],
+          "samples": [
+            "{questionText} {answerLetter} {answerText}",
+            "{questionText} {answerText}",
+            "option {answerLetter} {answerText}",
+            "option {answerLetter}",
+            "the answer is {answerLetter} {answerText}",
+            "the answer is {answerText}",
+            "the answer is {answerLetter}",
+            "{answerLetter} {answerText}",
+            "{answerText}",
+            "{answerLetter}",
+            "I think the answer is {answerText}",
+            "I think the answer is {answerLetter} {answerText}",
+            "I think the answer is {answerLetter}"
+          ]
+        },
+        {
+          "name": "GetQuestionFromServerIntent",
+          "slots": [
+            {
+              "name": "questionServerID",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "get new question",
+            "get question {questionServerID} from server"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "d"
+              }
+            },
+            {
+              "name": {
+                "value": "c"
+              }
+            },
+            {
+              "name": {
+                "value": "b"
+              }
+            },
+            {
+              "name": {
+                "value": "a"
+              }
+            }
+          ],
+          "name": "LetterType"
+        },
+        {
+          "values": [
+            {
+              "id": "14_1_D",
+              "name": {
+                "value": "England"
+              }
+            },
+            {
+              "id": "14_1_C",
+              "name": {
+                "value": "Europe"
+              }
+            },
+            {
+              "id": "14_1_B",
+              "name": {
+                "value": "India"
+              }
+            },
+            {
+              "id": "14_1_A",
+              "name": {
+                "value": "The United States of America"
+              }
+            }
+          ],
+          "name": "AnswerType"
+        },
+        {
+          "values": [
+            {
+              "id": "14_1",
+              "name": {
+                "value": "Tagore was born in"
+              }
+            }
+          ],
+          "name": "QuestionType"
+        }
+      ]
+    }
+  },
+  "version": "12"
+}

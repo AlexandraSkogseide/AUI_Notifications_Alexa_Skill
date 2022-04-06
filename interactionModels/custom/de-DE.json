@@ -1,0 +1,152 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "test mitteilung",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "Keine Antwort"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "OpenNotificationIntent",
+          "slots": [],
+          "samples": [
+            "tell me the notification",
+            "show me the notification",
+            "open the notification",
+            "give me the notification",
+            "what is the notification",
+            "open notification"
+          ]
+        },
+        {
+          "name": "AnswerQuestionIntent",
+          "slots": [
+            {
+              "name": "answerLetter",
+              "type": "LetterType"
+            },
+            {
+              "name": "answerText",
+              "type": "AnswerType"
+            },
+            {
+              "name": "questionText",
+              "type": "QuestionType"
+            }
+          ],
+          "samples": [
+            "the answer is {answerText}",
+            "{answerText}",
+            "I think the answer is {answerText}"
+          ]
+        },
+        {
+          "name": "GetQuestionFromServerIntent",
+          "slots": [
+            {
+              "name": "questionServerID",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "get question {questionServerID} from server"
+          ]
+        },
+        {
+          "name": "RepeatQuestionIntent",
+          "slots": [],
+          "samples": [
+            "Wiederhole bitte die Mitteilung",
+            "Wiederhole die Mitteilung",
+            "Wiederhole Mitteilung"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "C"
+              }
+            },
+            {
+              "name": {
+                "value": "B"
+              }
+            },
+            {
+              "name": {
+                "value": "A"
+              }
+            }
+          ],
+          "name": "LetterType"
+        },
+        {
+          "values": [
+            {
+              "id": "14_1_c",
+              "name": {
+                "value": "Option c"
+              }
+            },
+            {
+              "id": "14_1_b",
+              "name": {
+                "value": "Option b"
+              }
+            },
+            {
+              "id": "14_1_a",
+              "name": {
+                "value": "Option a",
+                "synonyms": [
+                  "Option a.",
+                  "option A.",
+                  "Option A.",
+                  "option a.",
+                  "option A",
+                  "Option A",
+                  "option a"
+                ]
+              }
+            }
+          ],
+          "name": "AnswerType"
+        },
+        {
+          "values": [
+            {
+              "id": "14_1",
+              "name": {
+                "value": "Tagore was born in"
+              }
+            }
+          ],
+          "name": "QuestionType"
+        }
+      ]
+    }
+  },
+  "version": "7"
+}
